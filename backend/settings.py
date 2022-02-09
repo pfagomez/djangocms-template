@@ -36,7 +36,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'backend.settings'
 
 BASE_DIR: str = locals()['BASE_DIR']
 
-# environ.Env.read_env(os.path.join(BASE_DIR, '.local-env'))  # Uncomment if you use local setup without docker
+environ.Env.read_env(os.path.join(BASE_DIR, '.local-env'))  # Uncomment if you use local setup without docker
 DOMAIN: str = locals().get('DOMAIN', 'localhost')
 SITE_NAME: str = locals().get('SITE_NAME', 'dev testing site')
 
@@ -49,7 +49,7 @@ USE_TZ = True
 TIME_ZONE = 'Europe/Zurich'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG', default=True)
 # you can use this on the live environment to get the full exception stack trace in the logs
 DEBUG_PROPAGATE_EXCEPTIONS = env.bool('DEBUG_PROPAGATE_EXCEPTIONS', default=False)
 # this is set by Divio environment automatically
@@ -261,9 +261,9 @@ if DJANGO_ENV == DjangoEnv.LOCAL:
 CACHES = {'default': django_cache_url.config(default="dummy://")}
 
 
-SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=True)
+SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=False)
 # PREPEND_WWW = True (if you want to redirect domain.com/... to www.domain.com/...
-HTTP_PROTOCOL = env.str('HTTP_PROTOCOL', 'https')
+HTTP_PROTOCOL = env.str('HTTP_PROTOCOL', 'http')
 
 
 STATICFILES_DIRS = [

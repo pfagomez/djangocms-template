@@ -95,11 +95,12 @@
     {#        {% gtm_head settings.GTM_CONTAINER_ID %}#}
 </head>
 <header style="max-width: inherit;  left: 50%;
-transform: translate(-50%, -0%); z-index: 1000;" class=" u-clearfix u-header u-header" id="sec-0efc" data-animation-name=""
+transform: translate(-50%, -0%);" class=" u-clearfix u-header u-header" id="sec-0efc" data-animation-name=""
   data-animation-duration="10" data-animation-delay="0" data-animation-direction="">
        
 {% show_menu 0 100 100 100 "menu/menu.html" %}
-<body id="page-top" style="z-index:-1;" class="lang-{{ lang_code }} {% render_block 'body_classes' %}">
+</header>
+<body id="page-top" class="lang-{{ lang_code }} {% render_block 'body_classes' %}">
 
 {#        {% gtm_body settings.GTM_CONTAINER_ID %}#}
 
