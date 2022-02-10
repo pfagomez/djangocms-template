@@ -17,3 +17,4 @@ backend/.local-env
 .idea/
 .DS_Store
 .divio
+.sqlite
