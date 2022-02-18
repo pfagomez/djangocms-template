@@ -1,6 +1,5 @@
 {% load cms_tags sekizai_tags static i18n menu_tags page_meta_tags gtm_tags %}
 
-
 {% page_meta request.current_page as page_meta %}
 
 {% get_current_language as lang_code %}
@@ -98,13 +97,13 @@
 
     {#        {% gtm_head settings.GTM_CONTAINER_ID %}#}
 </head>
+<body id="page-top" class="u-body lang-{{ lang_code }} {% render_block 'body_classes' %}">
 <header style="max-width: inherit;  left: 50%; z-index: 90000;
 transform: translate(-50%, -0%);" class=" u-clearfix u-header u-header" id="sec-0efc" data-animation-name=""
   data-animation-duration="10" data-animation-delay="0" data-animation-direction="">
 {% show_menu 0 100 100 100 "menu/menu.html" %}
 </header>
-
-<body id="page-top" class="u-body lang-{{ lang_code }} {% render_block 'body_classes' %}">
+<main>
 {#        {% gtm_body settings.GTM_CONTAINER_ID %}#}
 
 {% cms_toolbar %}
@@ -122,7 +121,7 @@ transform: translate(-50%, -0%);" class=" u-clearfix u-header u-header" id="sec-
 </div>
 
 {% block content_after %}{% endblock %}
-
+</main>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-6419">
         {% static_placeholder 'footer' %}
         <div class="u-clearfix u-sheet u-sheet-1">
