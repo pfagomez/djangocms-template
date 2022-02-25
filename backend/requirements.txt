@@ -291,7 +291,7 @@ django-taggit-templatetags==0.2.5
     # via djangocms-blog
 django-templatetag-sugar==1.0
     # via django-taggit-templatetags
-django-treebeard==4.4
+django-treebeard==4.4, !=4.5.1
     # via
     #   django-cms
     #   djangocms-video

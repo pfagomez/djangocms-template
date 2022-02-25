@@ -18,3 +18,4 @@ backend/.local-env
 .DS_Store
 .divio
 .sqlite
+db.sqlite
