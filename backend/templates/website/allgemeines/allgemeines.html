@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="DCMTK - OFFIS DICOM Toolkit">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <link rel="stylesheet" href="{% static 'website/static/css/nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'website/static/css/style.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'website/static/js/vendor/jquery/jquery.js' %}"
+    defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'website/static/js/nicepage.js' %}" defer=""></script>
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "logo": "images/DICOMLogo.jpg"
+      }</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:type" content="website">
+
+  <title>Allgemeines</title>
+  <link rel="stylesheet" href="{% static 'website/static/css/allgemeines.css' %}" media="screen">
+  <meta property="og:title" content="Allgemeines">
+</head>
+
+{% include "website/navbar.html" %}
+
+<body data-home-page="Allgemeines.html" data-home-page-title="Allgemeines" class="u-body">
+  <div class="u-clearfix u-blue-0 u-section-1" id="sec-b8cd">
+    <h2>Willkommen auf den Webseiten von dicom.offis.de</h2>
+    <p>Auf diesen Webseiten stehen Ihnen sämtliche Informationen zu DICOM-Aktivitäten im Informatikinstitut OFFIS zur
+      Verfügung. Wir haben uns bemüht, die Seiten möglichst übersichtlich zu gestalten. Anmerkungen zu diesen Seiten
+      bitte
+      per E-Mail an&nbsp;<img src="{% static 'images/email.gif' %}" alt="email" width="89" height="13"
+        img-align="middle">&nbsp;senden.</p>
+    <table style="margin-left: auto; margin-right: auto;" class="u-table-entity">
+      <colgroup>
+        <col width="50%">
+        <col width="50%">
+      </colgroup>
+      <thead class="u-grey-m u-table-header u-table-header-1">
+      </thead>
+      <tbody class="u-table-body">
+        <tr style="height: 76px; text-align: center;">
+          <th style="text-align: center;" valign="top"><a class="selektor u-text-white" href="/allgemeines">Allgemeines</a></td>
+          <th style="text-align: center;" valign="top">Informationen zu Standardisierung in der Medizin und Grundlagen des DICOM-Standards</td>
+        </tr>
+        <tr style="height: 76px; text-align: center;">
+          <th style="text-align: center;" valign="top"><a class="selektor u-text-white" href="/dcmtk">DICOM-Software</a></td>
+          <th style="text-align: center;" valign="top">Informationen zu DICOM-Software made by OFFIS</td>
+        </tr>
+        <tr style="height: 76px; text-align: center;">
+          <th style="text-align: center;" valign="top"><a class="selektor u-text-white" href="/dienstleistungen">Dienstleistungen</a></td>
+          <th style="text-align: center;" valign="top">Informationen zu DICOM-spezifischen Dienstleistungen durch OFFIS</td>
+        </tr>
+        <tr style="height: 76px; text-align: center;">
+          <th style="text-align: center;" valign="top"><a class="selektor u-text-white" href="/kontakt">Kontakt</a></td>
+          <th style="text-align: center;" valign="top">Ansprechpartner im OFFIS zum Thema DICOM</td>
+        </tr>
+        <tr style="height: 76px; text-align: center;">
+          <th style="text-align: center;" valign="top"><a class="selektor u-text-white" href="/dcmtk/spenden">Spenden</a></td>
+          <th style="text-align: center;" valign="top">Spenden per PayPal an das OFFIS DICOM-Team</td>
+        </tr>
+    </table>
+    <div class="dicomlogo">
+      <a href="https://www.dicomstandard.org/">
+        <img style="display: block; margin: 0 auto;" src="{% static 'images/dicomlogo.jpg' %}" alt="DICOM logo"
+          width="379" height="97"></a>
+    </div>
+  </div>
+</body>
+
+{% include "website/footer.html" %}
+
+</html>

@@ -1,0 +1,344 @@
+{% load static %}
+<header style="max-width: inherit;  left: 50%; z-index: 90000;
+transform: translate(-50%, -0%);" class=" u-clearfix u-header u-header" id="sec-0efc" data-animation-name=""
+  data-animation-duration="10" data-animation-delay="0" data-animation-direction="">
+  <nav style="max-width: inherit;  left: 50%;
+  transform: translate(-50%, -0%);" id="nav" role="navigation" class="invisible">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <!-- These spans generate the hamburger menu icon -->
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="side-menu" class="u-opacity u-opacity-95" ::before>
+        <li class="u-nav-item">
+          <a class="  u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" style="padding-right:40px"
+            href="{% url 'allgemeines' %}">Allgemeines </a>
+          <div class="u-nav-popup">
+            <ul class=" u-h-spacing-45 u-nav u-v-spacing-12 u-nav-8" style="border-left:3px solid white">
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px; z-index: 950;" href="{% url 'allgemeines' %}">Überblick</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px; z-index: 950;"
+                  href="{% url 'standardisierung' %}">Standardisierung</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px; z-index: 950;"
+                  href="{% url 'dicom-einfuehrung' %}" >DICOM-Einführung</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'dcmtk' %}">DCMTK</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-v-spacing-12 u-nav-9" style="border-left:3px solid white">
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dcmtk' %}">Überblick</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dcmtk-einfuehrung' %}">DCMTK-Einführung</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dcmtk-tools' %}">DCMTK-Tools</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;"
+                  href="{% url 'softwareentwicklung-mit-dcmtk' %}">Softwareentwicklung </a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'softwareentwicklung-mit-dcmtk' %}">mit
+                  DCMTK</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'support' %}">Support</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'spenden' %}">Spenden</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'dcmtk-erweiterungsmodule' %}">
+            DCMTK-<br>Erweiterungsmodule</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-v-spacing-12 u-nav-10" style="border-left:3px solid white">
+              <p>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dcmtk-erweiterungsmodule' %}">Überblick</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;"
+                    href="{% url 'dcmprint' %}">DCMPRINT</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;"
+                    href="{% url 'dcmjp2k' %}">DCMJP2K</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dcmpps' %}">DCMPPS</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;"
+                    href="{% url 'dcmppscu' %}">DCMPPSCU</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;" href="{% url 'ppsmgr' %}">PPSMGR</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;"
+                    href="{% url 'dcmstcom' %}">DCMSTCOM</a>
+                </li>
+                <li class="u-nav-item">
+                  <a class="u-text-white" style="margin-left: 25px;"
+                    href="{% url 'testversionen' %}">Testversionen</a>
+                </li>
+              </p>
+            </ul>
+          </div>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'dicomscope' %}">DICOMscope</a>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'dienstleistungen' %}">Dienstleistungen</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-v-spacing-12 u-nav-11" style="border-left:3px solid white">
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'dienstleistungen' %}">Überblick</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;"
+                  href="{% url 'dicom-beratung' %}">DICOM-Beratung</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;"
+                  href="{% url 'dicom-schulung' %}">DICOM-Schulung</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;"
+                  href="{% url 'ihe-schulung' %}">IHE-Schulung</a>
+              </li>
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;"
+                  href="{% url 'hl7-schulung' %}">HL7-Schulung</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="u-nav-item">
+          <a class=" u-nav-link u-text-white u-text-hover-palette-B-base" href="{% url 'kontakt' %}">Kontakt</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-v-spacing-12 u-nav-12" style="border-left:3px solid white">
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'kontakt' %}">Überblick</a>
+              </li>
+
+              <li class="u-nav-item">
+                <a class="u-text-white" style="margin-left: 25px;" href="{% url 'ansprechpartner' %}">Ansprechpartner</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="top-menu" style="max-width: inherit;  left: 50%;
+  transform: translate(-50%, -0%);" class=" u-menu u-menu-dropdown u-offcanvas u-menu-1" data-position="right">
+    <div id="collapsed-top-menu" class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+      <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+        href="#">
+      </a>
+    </div>
+    <div id="uncollapsed-top-menu" style="max-width: inherit;" class="u-nav-container">
+      <ul id="top-menu-unordered-list" style="max-width: inherit;  left: 50%; z-index: 950;
+      transform: translate(-50%, -0%);" class="u-nav u-tabs.u-tab-links-align-right u-tab-list">
+        <!-- <li style="max-width: 20%" class="u-nav-item"> -->
+        <li style="max-width: 20%" class="u-nav-item">
+          <a href="https://www.offis.de/"><img class="shadow brand-logo"
+              src="{% static 'images/offis_whitebackground.png' %}" height="100px"></a>
+        </li>
+        <li style="max-width: 20%" class="u-nav-item">
+          <a href="{% url 'home' %}"><img class="shadow brand-logo" src="{% static 'images/dcmtk.svg' %}"
+              height="100px"></a>
+        </li>
+        <li style="min-width: fit-content" class="u-nav-item">
+          <!-- <li style=" min-width:10%; max-width: 15%; text-align: left; margin-left: -25px;"
+          class="u-nav-item u-align-left"> -->
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+            href="{% url 'home' %}">Home</a>
+        </li>
+        <!-- <li style=" min-width:13%; max-width: 10%; margin-left: -25px;" class="u-nav-item u-align-left"> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+            href="{% url 'allgemeines' %}">Allgemeines</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-unstyled u-v-spacing-12 u-nav-2">
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                    href="{% url 'standardisierung' %}">Standardisierung</a>
+                </div>
+              </li>
+
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                  href="{% url 'dicom-einfuehrung' %}">DICOM-Einführung</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- <li style=" min-width:5%; max-width: 10%; margin-left: -25px;" class="u-nav-item"> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+          href="{% url 'dcmtk' %}">DCMTK</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-unstyled u-v-spacing-12 " style="margin-left:-20%;">
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmtk-einfuehrung' %}">DCMTK-Einführung</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmtk-tools' %}">DCMTK-Tools</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                    href="{% url 'softwareentwicklung-mit-dcmtk' %}">Softwareentwicklung <br>mit DCMTK</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'support' %}">Support</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'spenden' %}">Spenden</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- <li style=" min-width:17%; max-width: 10%; margin-left: -25px;" class="u-nav-item  "> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+            href="{% url 'dcmtk-erweiterungsmodule' %}" >
+            <br>DCMTK</br> Erweiterungsmodule</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-unstyled u-v-spacing-12 u-nav-4">
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmprint' %}">DCMPRINT</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmjp2k' %}">DCMJP2K</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmpps' %}">DCMPPS</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmppscu' %}">DCMPPSCU</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'ppsmgr' %}">PPSMGR</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'dcmstcom' %}">DCMSTCOM</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                    href="{% url 'testversionen' %}">Testversionen</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- <li style=" min-width:15%; max-width: 10%; margin-left: -25px;" class="u-nav-item"> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+            href="{% url 'dicomscope' %}">DICOMscope</a>
+        </li>
+
+        <!-- <li style=" min-width:10%; max-width: 50%; margin-left: -25px;" class="u-nav-item"> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+            href="{% url 'dienstleistungen' %}">Dienstleistungen</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-unstyled u-v-spacing-12 u-nav-5">
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                    href="{% url 'dicom-beratung' %}">DICOM-Beratung</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link"
+                    href="{% url 'dicom-schulung' %}">DICOM-Schulung</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'ihe-schulung' %}">IHE-Schulung</a>
+                </div>
+              </li>
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'hl7-schulung' %}">HL7-Schulung</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- <li style=" min-width:10%; max-width: 50%; margin-left: -25px;" class="u-nav-item"> -->
+        <li style="min-width: fit-content" class="u-nav-item">
+          <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-B-base u-align-center" style="padding: 20px 12px;"
+          href="{% url 'kontakt' %}">Kontakt</a>
+          <div class="u-nav-popup">
+            <ul class="u-h-spacing-45 u-nav u-unstyled u-v-spacing-12 u-nav-6">
+              <li class="u-nav-item">
+                <div class="styled-button4">
+                  <a class="u-button-style u-white-0 u-nav-link" href="{% url 'ansprechpartner' %}">
+                    Ansprechpartner</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="u-black u-menu-overlay u-opacity u-opacity-70">
+    </div>
+    </div>
+  </nav>
+</header>

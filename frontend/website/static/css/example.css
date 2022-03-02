@@ -38,7 +38,7 @@ html, body {
   padding: 1em;
 }
 
-.menu {
+.side-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@ html, body {
   padding: 0;
 }
 
-.menu > li {
+.side-menu > li {
   margin: 0 1rem;
 }
 

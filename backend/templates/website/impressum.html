@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="DCMTK - OFFIS DICOM Toolkit">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <link rel="stylesheet" href="{% static 'website/static/css/nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'website/static/css/style.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'website/static/js/vendor/jquery/jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'website/static/js/nicepage.js' %}" defer=""></script>
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "logo": "images/DICOMLogo.jpg"
+      }</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:type" content="website">
+
+  <title> Impressum</title>
+  <link rel="stylesheet" href="{% static 'website/static/css/impressum.css' %}" media="screen">
+  <meta property="og:title" content=" Impressum">
+</head>
+
+{% include "website/navbar.html" %}
+
+<body data-home-page=" Impressum.html" data-home-page-title=" Impressum" class="u-body">
+    <table border="0" cellspacing="10" cellpadding="0">
+    <colgroup>
+      <col width="300">
+      <col width="350">
+    </colgroup>
+    <tr><td valign="top"><b>Anschrift</b></td><td valign="top">OFFIS e. V.<br>Escherweg 2<br>26121 Oldenburg<br>Deutschland</td></tr>
+    <tr><td valign="top"><b>Telefon</b></td><td valign="top">+49 441 9722-0</td></tr>
+    <tr><td valign="top"><b>Telefax</b></td><td valign="top">+49 441 9722-102</td></tr>
+    <tr><td valign="top"><b>E-Mail</b></td><td valign="top"><a class="textlink" href="mailto:institut@offis.de">institut@offis.de</a></td></tr>
+    <tr><td valign="top"><b>Internet</b></td><td valign="top"><a class="textlink" href="https://www.offis.de/">https://www.offis.de/</a></td></tr>
+    <tr><td valign="top"><b>Vertretungsberechtigter Vorstand</b></td><td valign="top">
+      Prof. Dr. Sebastian Lehnhoff (Vorsitzender)<br>
+      Prof. Dr.-Ing. Wolfgang H. Nebel<br>
+      Prof. Dr. techn. Susanne Boll-Westermann<br>
+      Prof. Dr.-Ing. Andreas Hein<br>
+    </td></tr>
+    <tr><td valign="top"><b>Registergericht</b></td><td valign="top">Amtsgericht Oldenburg, Registernummer VR 1956</td></tr>
+    <tr><td valign="top"><b>Ust-Idnr. gem. § 27a UStG</b></td><td valign="top">DE 811582102</td></tr>
+    <tr><td valign="top"><b>Verantwortlich im Sinne der Presse</b></td><td valign="top">Dr. Wilfried Thoben<br>OFFIS e. V.<br>Escherweg 2<br>26121 Oldenburg</td></tr>
+  </table>
+</body>
+
+{% include "website/footer.html" %}
+
+</html>

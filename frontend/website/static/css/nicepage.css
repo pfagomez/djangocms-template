@@ -4049,7 +4049,7 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background-color: #ff0;
+  background-color: ff0;
   color: #000;
 }
 small {
@@ -17701,7 +17701,7 @@ div.u-video,
   color: inherit;
 }
 .u-nav-container > .u-nav > .u-nav-item > .u-nav-link {
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 .menu-collapse {
   display: none;
@@ -20486,6 +20486,7 @@ a.u-button-style.u-border-9 {
 .u-text.u-border-10,
 a.u-button-style.u-border-10 {
   border-width: 10px;
+  border-color:rgb(31, 144, 192);
 }
 .u-shape-svg.u-border-10 {
   stroke-width: 10px;

@@ -1,0 +1,50 @@
+{% load menu_tags i18n static%}
+<!-- Combination of these: -->
+<!-- https://getbootstrap.com/docs/4.4/components/navbar/#supported-content -->
+<!-- https://github.com/django-cms/django-cms/blob/develop/menus/templates/menu/menu.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+    <!-- Brand -->
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <a alt="Logo" style="max-width:20%;" class="navbar-brand" href="https://www.offis.de/"><img
+            class="shadow brand-logo" height="100px" src="{% static 'images/offis_whitebackground.png' %}"></a>
+    <a alt="Logo" style="max-width:20%;" class="navbar-brand" href="{% url 'home' %}"><img class="shadow brand-logo"
+            height="100px" src="{% static 'images/dcmtk_ohne_rand.png' %}"></a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Page Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            {% for child in children %}
+            <li class="child
+            {% if child.selected %} active{% endif %}
+            {% if child.ancestor %} active{% endif %}
+            {% if child.sibling %} sibling{% endif %}
+            {% if child.descendant %} descendant{% endif %}
+            {% if child.children %} dropdown{% endif %}
+            ">
+                <a style="padding-right:20px" class="nav-link{% if child.children %} dropdown-toggle{% endif %}" {% if
+                    child.children %} id="navbarDropdownMenuLink{{ child.get_menu_title }}" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}
+                    href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+                {% if child.children %}
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{ child.get_menu_title }}">
+                    <a class="dropdown-item" id="navbarDropdownMenuListLink{{ child.get_menu_title }}"
+                        href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title
+                        }}</a>
+                    <div class="dropdown-divider"></div>
+                    {% for grandchild in child.children %}
+                    <a class="dropdown-item"
+                        href="{{ grandchild.attr.redirect_url|default:grandchild.get_absolute_url }}">
+                        {{ grandchild.get_menu_title }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
