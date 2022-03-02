@@ -9,7 +9,7 @@ import environ
 from django.urls import reverse_lazy
 from django_storage_url import dsn_configured_storage_class
 from link_all.dataclasses import LinkAllModel
-
+import backend.DICOMOFFIS
 
 ################################################################################
 # divio
@@ -61,7 +61,9 @@ if DEBUG:
 
 SITE_ID = env.int('SITE_ID', default=1)
 
-INSTALLED_APPS = []
+INSTALLED_APPS = [
+    'backend.DICOMOFFIS',
+]
 installed_apps_overrides = [
     # for USERNAME_FIELD = 'email', before `cms` since it has a User model
     'backend.auth',
@@ -69,6 +71,7 @@ installed_apps_overrides = [
     'backend.blog',
 
     'djangocms_modules',
+
 ]
 INSTALLED_APPS = installed_apps_overrides + INSTALLED_APPS
 
@@ -463,6 +466,7 @@ CSP_MEDIA_SRC = ("*", "'self'", "https://*.divio-media.org", "data:")
 
 CMS_TEMPLATES = [
     ('content-full-width.html', 'full width'),
+    ('content-blue-container.html', 'blue container'),
     ('whitenoise-static-files-demo.html', 'Static File Demo'),
 ]
 
@@ -474,7 +478,8 @@ LANGUAGE_CODE = "en"
 
 LANGUAGES = [
     ('en', "English"),
-    ('de', "German"),
+    ('de', "Deutsch"),
+    ('es', "Español"),
 ]
 CMS_LANGUAGES = {
     SITE_ID: [
@@ -484,14 +489,17 @@ CMS_LANGUAGES = {
         },
         {
             'code': 'de',
-            'name': 'German',
+            'name': 'Deutsch',
         },
-    ],
+        {
+            'code': 'es',
+            'name': 'Español',
+        },    ],
     'default': {
         'fallbacks': ['en', 'de'],
         'redirect_on_fallback': True,
         'public': True,
-        'hide_untranslated': False,
+        'hide_untranslated': True,
     }
 }
 PARLER_LANGUAGES = CMS_LANGUAGES
