@@ -1,4 +1,6 @@
-
+li{
+  border-width:thick;
+}
 
  p1 { 
   width: 50px;
@@ -29,13 +31,13 @@
   background-color: #777;
 } 
 
-@media screen and (max-width:1441px) {
+@media screen and (max-width:1200px) {
   .u-nav-container{
     display: none;
   }
 }
 
-@media screen and (max-width:1190px) {
+@media screen and (max-width:1199px) {
   .u-nav-container-collapse{
     display: flex;
   }
@@ -79,16 +81,18 @@
   text-decoration: underline rgb(255,135,0);
 }
 
+/* From https://stackoverflow.com/a/53884813 for equally sized columns*/
 .wrapper4{
-  display: flex;
   align-content: center ;
   top: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   border: 5px;
   padding-left:20px;
   padding-right:20px;
   margin-bottom: 40px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
 }
 
 
@@ -136,16 +140,15 @@ img {
   }
 }
 .container {
-  grid-template-columns: repeat(3, 200px);
-  grid-auto-rows: 20px;
-  gap: 125px;
-  width: 100%;
-  max-width: 45rem;
-  padding: 0.5rem;
-  margin: 0 auto;
-  box-sizing: content-box;
-  background-color: aquamarine;
-}
+    grid-template-columns: repeat(4, 200px);
+    grid-auto-rows: 20px;
+    gap: 125px;
+    width: 100%;
+    max-width: 37.5rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
   @media (max-width: 767px){
     .wrapper4{
       display: flex;
@@ -498,7 +501,7 @@ img.shadow {
 a.u-button-style.u-border-1 {
   border-width: 5px;
 }
-/* 
+
 .container2 {
   position: absolute;
   text-align: left;
@@ -507,18 +510,8 @@ a.u-button-style.u-border-1 {
   margin-top: 306px;
   margin-left: 108px;
 
-} */
-.container2 {
-  grid-template-columns: repeat(3, 200px);
-  grid-auto-rows: 20px;
-  gap: 125px;
-  width: 100%;
-  max-width: 45rem;
-  padding: 0.5rem;
-  margin: 0 auto;
-  box-sizing: content-box;
-  background-color: aquamarine;
 }
+
 
 /* Tabelle */
 th,
@@ -795,7 +788,7 @@ header.frame2{
 .u-enable-responsive .u-nav-container-2 {
   display: none;
 }
-@media (min-width:1441px){
+@media (min-width:1200px){
   .u-menu-close{
       display: fixed;
 }
@@ -922,7 +915,7 @@ body
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
+#side-menu
 {
   position: absolute;
   width: 350px;
@@ -941,11 +934,11 @@ body
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
+#side-menu li
 {
   padding: 3px 50px 0 0;
   font-size: 18px;
-  
+  border-left: 10px none white;
 
 }
 
@@ -957,13 +950,13 @@ body
   transform: none;
 }
 
-@media (min-width: 1441px){
+@media (min-width: 1201px){
  .invisible{
     display: flex;
   }
 }
 
-@media (min-width: 1442px){
+@media (min-width: 1201px){
   .invisible{
      display: none;
    }
@@ -1013,11 +1006,9 @@ nav li > a:only-child:after {
   display: block;
 } */
 
-/* weißer Balken*/
-.weißerBalken{
-height:15px;
-width: 15px;
-position:relative;
-background-color:white;
+#show1{
+  z-index: 950;
 }
-
+#show2{
+  z-index: 900;
+}
