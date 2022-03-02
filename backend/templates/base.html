@@ -92,13 +92,20 @@
 
         <link rel="stylesheet" href="{% static 'dist/vendor.css' %}">
         <link rel="stylesheet" href="{% static 'dist/global.css' %}">
-        <!-- manually included -->
-        <script class="u-script" type="text/javascript" src="{% static 'website/static/js/vendor/jquery/jquery.js' %}"
-        defer=""></script>
+        <!-- START manually included -->
+        <script class="u-script" type="text/javascript" src="{% static 'website/static/js/vendor/jquery/jquery.js' %}" defer=""></script>
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <script class="u-script" type="text/javascript" src="{% static 'website/static/js/nicepage.js' %}" defer=""></script>
         <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-        <!-- manually included -->
+        <!-- END manually included -->
         {% block head_prod_frontend_files %}{% endblock %}
     {% endif %}
 
