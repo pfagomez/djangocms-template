@@ -26,15 +26,16 @@
             {% if child.descendant %} descendant{% endif %}
             {% if child.children %} dropdown{% endif %}
             ">
-                <a style="padding-right:20px" class="nav-link{% if child.children %} dropdown-toggle{% endif %}" {% if
-                    child.children %} id="navbarDropdownMenuLink{{ child.get_menu_title }}" role="button"
+                <a style="padding-right:20px" class="nav-link
+                {% if child.children %} dropdown-toggle{% endif %}"
+                {% if child.children %}
+                    id="navbarDropdownMenuLink{{ child.get_menu_title }}" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}
                     href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
                 {% if child.children %}
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{ child.get_menu_title }}">
                     <a class="dropdown-item" id="navbarDropdownMenuListLink{{ child.get_menu_title }}"
-                        href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title
-                        }}</a>
+                        href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title}}</a>
                     <div class="dropdown-divider"></div>
                     {% for grandchild in child.children %}
                     <a class="dropdown-item"
